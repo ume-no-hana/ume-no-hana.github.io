@@ -1,0 +1,83 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@import "agency.scss";
+.masthead {
+  .shadow-mask {
+    background-color: rgba(50, 50, 50, 0.3);
+  }
+}
+.page {
+  header.masthead .intro-text {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  main {
+    margin-top: 20px;
+  }
+}
+.blog {
+  .posts {
+    .post-teaser {
+      padding: 20px 0;
+      width: 100%;
+      margin-bottom: 0;
+      display: inline-block;
+      background-size: cover;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      .meta {
+        color: rgba(56, 56, 56, 0.5);
+        font-size: 0.9em;
+        letter-spacing: 0.1em;
+        margin: 0;
+        text-transform: uppercase;
+      }
+
+      img {
+        width: 100%;
+        padding: 0;
+        vertical-align: middle;
+      }
+      .post-img {
+        vertical-align: middle;
+        border-radius: 10px;
+        overflow: hidden;
+        @media (min-width: 768px) {
+          height: 250px;
+        }
+        // Smaller screen
+        @media screen and (max-width: 768px) {
+          height: 150px;
+        }
+      }
+      .post-img img {
+        // max-width: 100%;
+        -moz-transition-timing-function: ease-out;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+        -moz-transition: all 2s;
+        -webkit-transition: all 2s;
+        transition: all 2s;
+        &:hover {
+          -moz-transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+        }
+      }
+    }
+    .excerpt {
+      margin-top: 1em;
+    }
+  } // Pagination
+  .pagination {
+    padding: 20px 0;
+  }
+}
